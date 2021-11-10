@@ -149,4 +149,4 @@ highlight NvimTreeFolderIcon guibg=blue
     nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
     nnoremap <silent> <leader>dl :lua require'dap'.run_last()<CR>
 
-
+let g:vimspector_enable_mappings = 'HUMAN'
