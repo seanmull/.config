@@ -25,5 +25,5 @@ luafile $HOME/.config/nvim/lsp/lspinstaller.lua
 luafile $HOME/.config/nvim/lualine.lua
 luafile $HOME/.config/nvim/toggleterm.lua
 " luafile $HOME/.config/nvim/debuggerInstall.lua
-
-
+luafile $HOME/.config/nvim/barbar.lua
+" luafile $HOME/.config/nvim/debuggerInstall.lua

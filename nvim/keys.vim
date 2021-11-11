@@ -27,8 +27,8 @@ nnoremap <C-c> <Esc>
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Better tabbing
-vnoremap < <gv
-vnoremap > >gv
+" vnoremap < <gv
+" vnoremap > >gv
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
@@ -36,8 +36,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nnoremap <Leader>o o<Esc>^Da
-nnoremap <Leader>O O<Esc>^Da
+" nnoremap <Leader>o o<Esc>^Da
+" nnoremap <Leader>O O<Esc>^Da
 
 " For commenting
 nnoremap <space>/ :Commentary<CR>
@@ -139,14 +139,14 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
 
-    nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
-    nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
-    nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
-    nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
-    nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
-    nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
-    nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
-    nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
-    nnoremap <silent> <leader>dl :lua require'dap'.run_last()<CR>
+"     nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
+"     nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
+"     nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
+"     nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
+"     nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
+"     nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
+"     nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
+"     nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
+"     nnoremap <silent> <leader>dl :lua require'dap'.run_last()<CR>
 
 let g:vimspector_enable_mappings = 'HUMAN'

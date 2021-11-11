@@ -23,3 +23,9 @@ let g:startify_session_persistence = 1
 let g:startify_enable_special = 0
 
 let g:startify_custom_header = []
+
+autocmd BufEnter *
+       \ if !exists('t:startify_new_tab') && empty(expand('%')) && !exists('t:goyo_master') | 
+       \   let t:startify_new_tab = 1 |
+       \   Startify |
+       \ endif
