@@ -12,7 +12,7 @@ source $HOME/.config/nvim/lsp/lsp-config.vim
 " luafile $HOME/.config/nvim/lsp/compe-config.lua
 luafile $HOME/.config/nvim/snippets.lua
 luafile $HOME/.config/nvim/lsp/nvim-cmp.lua
-" luafile $HOME/.config/nvim/lsp/python-lsp.lua
+luafile $HOME/.config/nvim/lsp/python-lsp.lua
 " luafile $HOME/.config/nvim/lsp/bash-lsp.lua
 " luafile $HOME/.config/nvim/lsp/vim-lsp.lua
 luafile $HOME/.config/nvim/lsp/javascript-lsp.lua
