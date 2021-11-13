@@ -30,4 +30,4 @@ Aquasnap
 General notes
 Note so %
 copy and middle button to paste
-use :noau healthcheck
+use :noau checkhealth
