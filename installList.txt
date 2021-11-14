@@ -31,3 +31,14 @@ General notes
 Note so %
 copy and middle button to paste
 use :noau checkhealth
+
+
+To do list:
+Try to find way to speed up sourcing nvm or load lsp server without calling node/nvm
+   Don't source nvm I think you just need to wait for the server to load a bit
+Research and install
+   setxkbmap
+   xset
+   fnm maybe see if this can speed up my startup
+   zoxide
+Learn how to stow dotfiles
