@@ -34,10 +34,12 @@ use :noau checkhealth
 
 
 To do list:
-Try to find way to speed up sourcing nvm or load lsp server without calling node/nvm
 Research and install
    setxkbmap
    xset
    fnm maybe see if this can speed up my startup
    zoxide
 Learn how to stow dotfiles
+
+Issue to resolve later
+Try to find way to speed up sourcing nvm or load lsp server without calling node/nvm
