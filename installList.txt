@@ -1,0 +1,45 @@
+WSL install
+https://docs.microsoft.com/en-us/windows/wsl/setup/environment
+https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
+Nvm
+add this to zshrc 
+   source ~/.nvm/nvm.sh
+Node
+Npm
+Language servers
+  npm install -g typescript typescript-language-server
+  npm i -g vscode-langservers-extracted
+  npm i -g pyright
+cargo
+g++
+ripgrep
+pip
+pynvim
+debugpy
+zsh
+Pull the zsh configs from chris website
+  zsh
+  alacritty
+commend out all the git prompt stuff
+
+Windows install
+winget install Alacritty.Alacritty
+winget install "Windows Terminal"
+Aquasnap
+
+General notes
+Note so %
+copy and middle button to paste
+use :noau checkhealth
+
+
+To do list:
+Research and install
+   setxkbmap
+   xset
+   fnm maybe see if this can speed up my startup
+   zoxide
+Learn how to stow dotfiles
+
+Issue to resolve later
+Try to find way to speed up sourcing nvm or load lsp server without calling node/nvm
