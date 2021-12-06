@@ -38,7 +38,7 @@ Plug 'williamboman/nvim-lsp-installer'
 Plug 'romgrk/barbar.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/toggleterm.nvim'
-" Plug 'puremourning/vimspector'
-Plug 'vim-test/vim-test'
+Plug 'puremourning/vimspector'
+" Plug 'vim-test/vim-test'
 
 call plug#end()

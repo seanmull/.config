@@ -67,8 +67,10 @@ lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.gitsigns.active = true
 lvim.builtin.comment.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.lualine.active = true
+lvim.builtin.nvimtree.active = false
+-- lvim.builtin.nvimtree.setup.view.side = "left"
+-- lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.dap.active = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
@@ -88,6 +90,35 @@ lvim.builtin.treesitter.ensure_installed = {
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
+
+require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+
+require('telescope').load_extension('dap')
+
+local dap = require('dap')
+dap.adapters.node2 = {
+  type = 'executable',
+  command = 'node',
+  args = {os.getenv('HOME') .. '/vscode-node-debug2/out/src/nodeDebug.js'},
+}
+
+dap.configurations.javascript = {
+  {
+    type = 'node2',
+    request = 'launch',
+    program = '${file}',
+    cwd = vim.fn.getcwd(),
+    sourceMaps = true,
+    protocol = 'inspector',
+    console = 'integratedTerminal',
+  },
+}
+
+lvim.keys.normal_mode['<leader>dw'] = "<cmd>lua local widgets=require'dap.ui.widgets';widgets.centered_float(widgets.scopes)<CR>"
+vim.g.dap_virtual_text = true
+require("dapui").setup()
+lvim.keys.normal_mode['<leader>dU']= '<cmd>lua require"dapui".toggle()<CR>'
+
 
 -- generic LSP settings
 
@@ -152,11 +183,11 @@ lvim.builtin.treesitter.highlight.enabled = true
 --     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
 --     args = { "--severity", "warning" },
 --   },
---   {
---     exe = "codespell",
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "javascript", "python" },
---   },
+-- {
+--   exe = "codespell",
+--   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+--   filetypes = { "javascript", "python" },
+-- },
 -- }
 
 -- Additional Plugins
@@ -167,6 +198,45 @@ lvim.plugins = {
       cmd = "TroubleToggle",
     },
   {'ggandor/lightspeed.nvim'},
+  { 'nvim-telescope/telescope-dap.nvim' },
+  { 'mfussenegger/nvim-dap-python' }, -- Python
+{
+  "tpope/vim-fugitive",
+  cmd = {
+    "G",
+    "Git",
+    "Gdiffsplit",
+    "Gread",
+    "Gwrite",
+    "Ggrep",
+    "GMove",
+    "GDelete",
+    "GBrowse",
+    "GRemove",
+    "GRename",
+    "Glgrep",
+    "Gedit"
+  },
+  ft = {"fugitive"}
+},
+{
+  "metakirby5/codi.vim",
+  cmd = "Codi",
+},
+  {'theHamsta/nvim-dap-virtual-text'},
+  {'rcarriga/nvim-dap-ui'},
+  {'vim-test/vim-test'},
+  { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" },
+  {"tpope/vim-dispatch"},
+  {'sudormrfbin/cheatsheet.nvim',
+  requires = {
+    {'nvim-telescope/telescope.nvim'},
+    {'nvim-lua/popup.nvim'},
+    {'nvim-lua/plenary.nvim'},
+  }
+}
+
+
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
