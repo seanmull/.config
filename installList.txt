@@ -17,6 +17,7 @@ pip
 pynvim
 debugpy
 zsh
+tmux
 Pull the zsh configs from chris website
   zsh
   alacritty
