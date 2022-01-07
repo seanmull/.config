@@ -1,21 +1,15 @@
 {
-    "terminal.external.windowsExec": "C:\\Users\\bt530d\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git Bash",
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "window.zoomLevel": 1,
+    "workbench.colorTheme":  "One Dark Pro Darker",
     "workbench.iconTheme": "material-icon-theme",
-    "git.enableSmartCommit": true,
-    "files.exclude": {
-        "**/bin": true,
-        "**/obj": true,
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+    "remote.SSH.remotePlatform": {
+        "172.24.101.51": "linux"
     },
+    "terminal.integrated.defaultProfile.windows": "Ubuntu-18.04 (WSL)",
+    "window.zoomLevel": 1,
+    "editor.fontSize": 20,
+    "terminal.integrated.fontSize": 20,
+    "git.enableSmartCommit": true,
     "editor.suggestSelection": "first",
-    "csharpextensions.privateMemberPrefix": "_",
-    "angular.log": "terse",
-    "angular.enable-strict-mode-prompt": false,
     "git.confirmSync": false,
     "files.autoSave": "onFocusChange",
   "vim.easymotion": true,
@@ -24,8 +18,13 @@
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
   "vim.sneak": true,
-  "vim.easymotionMarkerooundColor": "#020202",
   "vim.normalModeKeyBindings": [
+    {
+      "before" : ["<leader>","a"],
+      "commands" : [
+        "workbench.view.explorer"
+      ]
+    },
     {
       "before": ["<leader>", "d"],
       "after": ["d", "d"]
@@ -99,7 +98,7 @@
     "<C-a>": false,
     "<C-f>": false,
     // VS Code new marker @ next occurence
-    "<C-d>": false,
+//    "<C-d>": false,
     // Copy
     "<C-c>": false,
     // Cut
@@ -108,7 +107,12 @@
     "<C-v>": false,
     "<C-z>": false,
     "<C-y>": false
-
-  },
-
+},
+"tabnine.experimentalAutoImports": true,
+"workbench.startupEditor": "none",
+"bracket-pair-colorizer-2.depreciation-notice": false,
+"python.defaultInterpreterPath": "C:\\Users\\sean.mull\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+"[jsonc]": {
+  "editor.defaultFormatter": "vscode.json-language-features"
+},
 }
